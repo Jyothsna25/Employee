@@ -30,7 +30,7 @@ public class empscon
 	 private empsservice empsservice;
 	 
 @PostMapping("/save")
-		public ResponseEntity<Employee>  saveemployee(@RequestBody empsdetails empsdetails)
+		public ResponseEntity<Employee>  saveemployee(@RequestBody Employee empsdetails)
 		{
 			Employee savedEmployee =  empsservice.saveemployee(empsdetails);
 			return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
@@ -41,7 +41,7 @@ public class empscon
 //get by id
 
 @GetMapping("/{id}")
-		public Employee getEmployee(@PathVariable int id)
+		public empsdetails getEmployee(@PathVariable int id)
 		{
 			return empsservice.getEmployee(id);
 		}

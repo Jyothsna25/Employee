@@ -14,11 +14,12 @@ import lombok.Data;
 public class Employee 
 {
 @Id
-@GeneratedValue(strategy = GenerationType.AUTO)
+
 
 	private int eid;
 	private  String ename;
 	private String designation;
+	private long addressId;
 	
 	
 }
